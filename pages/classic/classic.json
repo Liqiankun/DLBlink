@@ -1,1 +1,5 @@
-{}
+{
+  "usingComponents": {
+    "btn-like": "../../components/btn-like/index"
+  }
+}

@@ -4,24 +4,4 @@
   flex: 1;
   height: 300rpx;
   flex-direction: row;
-  background-color: gray
-}
-
-.chunk {
-  height: 200rpx;
-}
-
-.color-red {
-  flex: 1;
-  background-color: red;
-}
-
-.color-blue {
-  flex: 2;
-  background-color: blue;
-}
-
-.color-green {
-  flex: 3;
-  background-color: green;
 }
