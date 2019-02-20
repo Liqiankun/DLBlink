@@ -2,6 +2,6 @@
 .container {
   display: flex;
   flex: 1;
-  height: 300rpx;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: flex-start;
 }

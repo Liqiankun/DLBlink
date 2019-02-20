@@ -1,4 +1,5 @@
 <!-- pages/classic.wxml -->
-<view class='container'>
-  <btn-like></btn-like>
-</view>
+<!-- <view wx:if='{{classic}}' class='container'> -->
+<btn-like like='{{classic.like_status}}' count='{{classic.fav_nums}}' />
+<movie content='{{classic.content}}' image='{{classic.image}}' />
+<!-- </view> -->

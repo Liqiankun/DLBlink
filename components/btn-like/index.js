@@ -1,23 +1,26 @@
 // components/btn-like/index.js
 Component({
-  /**
-   * 组件的属性列表
-   */
   properties: {
-
+    count: {
+      type: Number,
+      observer: () => {}
+    },
+    liked: {
+      type: Boolean,
+      observer: () => {}
+    }
   },
 
-  /**
-   * 组件的初始数据
-   */
-  data: {
-
-  },
-
-  /**
-   * 组件的方法列表
-   */
   methods: {
+    onLike() {
+      let liked = this.properties.liked
+      let count = this.properties.count
+      count = liked ? count - 1 : count + 1
 
+      this.setData({
+        count: count,
+        liked: !liked
+      })
+    }
   }
 })
