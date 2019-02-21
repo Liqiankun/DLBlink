@@ -1,5 +1,6 @@
 <!-- pages/classic.wxml -->
 <!-- <view wx:if='{{classic}}' class='container'> -->
-<btn-like like='{{classic.like_status}}' count='{{classic.fav_nums}}' />
+<episode index='{{classic.index}}' />
+<btn-like bind:onLike='onLike' liked='{{classic.like_status}}' count='{{classic.fav_nums}}' />
 <movie content='{{classic.content}}' image='{{classic.image}}' />
 <!-- </view> -->

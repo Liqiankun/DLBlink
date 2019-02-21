@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "btn-like": "../../components/btn-like/index",
-    "movie": "../../../components/classic/movie/index"
+    "movie": "../../../components/classic/movie/index",
+    "episode": "../../../components/classic/episode/index"
   }
 }

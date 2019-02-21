@@ -1,0 +1,8 @@
+<!-- components/classic/episode/index.wxml -->
+<view>
+  <text>NO.</text>
+  <text>{{_index}}</text>
+  <text>|</text>
+  <text>{{month}}</text>
+  <text>{{year}}</text>
+</view>

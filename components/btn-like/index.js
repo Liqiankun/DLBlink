@@ -21,6 +21,8 @@ Component({
         count: count,
         liked: !liked
       })
+
+      this.triggerEvent('onLike', { liked: liked })
     }
   }
 })
