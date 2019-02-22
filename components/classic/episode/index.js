@@ -1,5 +1,5 @@
 // components/classic/episode/index.js
-import { getYear, getMonth } from '../../../utils/helper'
+import { getYear, getChineseMonth } from '../../../utils/helper'
 
 Component({
   properties: {
@@ -16,8 +16,8 @@ Component({
   },
 
   data: {
-    year: getYear(new Date()),
-    month: getMonth(new Date()),
+    year: getYear(),
+    month: getChineseMonth(),
     _index: 0
   },
 

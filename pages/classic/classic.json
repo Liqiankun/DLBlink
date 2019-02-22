@@ -2,6 +2,7 @@
   "usingComponents": {
     "btn-like": "../../components/btn-like/index",
     "movie": "../../../components/classic/movie/index",
-    "episode": "../../../components/classic/episode/index"
+    "episode": "../../../components/classic/episode/index",
+    "control-bar": "../../components/classic/control-bar/index"
   }
 }

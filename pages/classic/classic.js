@@ -4,7 +4,9 @@ import Like from '../../models/like'
 
 Page({
   data: {
-    classic: undefined
+    classic: undefined,
+    last: true,
+    first: false
   },
 
   onLoad: function () {
@@ -22,4 +24,12 @@ Page({
       art_id: id
     })
   },
+
+  onLeft() {
+
+  },
+
+  onRight() {
+    
+  }
 })
