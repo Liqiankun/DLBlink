@@ -5,7 +5,7 @@
     <btn-like class='like' bind:onLike='onLike' liked='{{classic.like_status}}' count='{{classic.fav_nums}}' />
   </view>
   <movie hidden='{{classic.type !== 100}}' content='{{classic.content}}' image='{{classic.image}}' />
-  <music hidden='{{classic.type !== 200}}' content='{{classic.content}}' image='{{classic.image}}' />
+  <music hidden='{{classic.type !== 200}}' content='{{classic.content}}' image='{{classic.image}}' musicSrc='{{classic.url}}' />
   <essay hidden='{{classic.type !== 300}}' content='{{classic.content}}' image='{{classic.image}}' />
   <control-bar class='control-bar' title='{{classic.title}}' last='{{last}}' first='{{first}}' bind:onLeft='onLeft' bind:onRight='onRight' />
 </view>
