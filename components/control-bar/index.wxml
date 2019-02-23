@@ -1,0 +1,6 @@
+<!-- components/classic/control-bar/index.wxml -->
+<view class='container'>
+  <image bind:tap='onLeft' class='icon' src="{{last ? './images/control_left_white.png' : './images/control_left.png'}}" />
+  <text class='title'>{{title}}</text>
+  <image class='icon' bind:tap='onRight' src="{{first ? './images/control_right_white.png' : './images/control_right.png'}}" />
+</view>

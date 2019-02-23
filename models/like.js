@@ -9,4 +9,13 @@ export default class Like {
       success: (res) => success && success(res)
     })
   }
+
+  static fetchClassicLike = (data, success) => {
+    console.log('res', data)
+    
+    Request.request({
+      url: `/classic/${data.category}/${data.artId}/favor`,
+      success: (res) => success && success(res)
+    })
+  }
 }

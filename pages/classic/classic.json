@@ -2,7 +2,9 @@
   "usingComponents": {
     "btn-like": "../../components/btn-like/index",
     "movie": "../../../components/classic/movie/index",
-    "episode": "../../../components/classic/episode/index",
-    "control-bar": "../../components/classic/control-bar/index"
+    "essay": "../../../components/classic/essay/index",
+    "music": "../../../components/classic/music/index",
+    "episode": "../../components/episode/index",
+    "control-bar": "../../components/control-bar/index"
   }
 }

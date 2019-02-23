@@ -1,5 +1,5 @@
 <!-- components/btn-like/index.wxml -->
 <view class='container' bind:tap='onLike'>
-  <image src="{{liked ? './images/like@2x.png' : './images/like_dis@2x.png'}}" />
+  <image src="{{liked ? './images/like.png' : './images/like_dis.png'}}" />
   <text wx:if='{{count > 0}}'>{{count}}</text>
 </view>
