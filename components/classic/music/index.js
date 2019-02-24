@@ -7,19 +7,28 @@ Component({
   behaviors: [Behavior],
   
   properties: {
-    musicSrc: String
+    musicSrc: String,
+    title: String,
   },
 
   data: {
     playing: false
   },
 
+  lifetimes: {
+    attached() {
+      this._recoverStatus()
+    }
+  },
+
+
   methods: {
     onControl() {
       const playing = this.data.playing
+      const { musicSrc, title } = this.properties 
 
-      audioManager.src = this.properties.musicSrc
-      audioManager.title = 'Music'
+      audioManager.src = musicSrc
+      audioManager.title = title
 
       if (playing) {
         audioManager.pause()
@@ -30,6 +39,18 @@ Component({
       this.setData({
         playing: !playing
       })
+    },
+
+    _recoverStatus() {
+      if (audioManager.paused) {
+        this.setData({
+          playing: false
+        })
+      } else if (audioManager.src === this.properties.musicSrc) {
+        this.setData({
+          playing: true
+        })
+      }
     }
   }
 })
