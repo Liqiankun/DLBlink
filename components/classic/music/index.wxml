@@ -1,6 +1,6 @@
 <!-- components/classic/music/index.wxml -->
 <view hidden='{{hidden}}' class='container' hidden='{{hidden}}'>
-  <image class='classic-img' src='{{image}}' />
+  <image class="classic-img {{playing ? 'rotation' : ''}}" src='{{image}}' />
   <image bind:tap='onControl' class='player-img' src="{{playing ? './images/player_pause.png' : './images/player_play.png'}}" />
   <image class='tag' src='./images/music_tag.png' />
   <text class='content'>{{content}}</text>

@@ -18,6 +18,7 @@ Component({
   lifetimes: {
     attached() {
       this._recoverStatus()
+      this._onControl()
     }
   },
 
@@ -27,12 +28,11 @@ Component({
       const playing = this.data.playing
       const { musicSrc, title } = this.properties 
 
-      audioManager.src = musicSrc
-      audioManager.title = title
-
       if (playing) {
         audioManager.pause()
       } else {
+        audioManager.src = musicSrc
+        audioManager.title = title
         audioManager.play()
       }
 
@@ -51,6 +51,13 @@ Component({
           playing: true
         })
       }
+    },
+
+    _onControl() {
+      audioManager.onPause(() => this._recoverStatus())
+      audioManager.onPlay(() => this._recoverStatus())
+      audioManager.onStop(() => this._recoverStatus())
+      audioManager.onEnded(() => this._recoverStatus())
     }
   }
 })
