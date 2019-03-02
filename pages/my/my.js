@@ -1,4 +1,4 @@
-// pages/classic.js
+// pages/my/my.js
 Page({
 
   /**
@@ -11,12 +11,12 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: option => {
+  onLoad: function (options) {
 
   },
 
   /**
-   * 生命周期函数--监听页面初次渲染完
+   * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
 

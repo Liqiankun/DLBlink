@@ -27,13 +27,25 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
-			"list": []
+			"current": 0,
+			"list": [
+				{
+					"id": -1,
+					"name": "Book Detail",
+					"pathName": "pages/book-detail/book-detail",
+					"query": "bookId=1002",
+					"scene": null
+				}
+			]
 		}
 	}
 }

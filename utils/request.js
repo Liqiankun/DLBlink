@@ -14,6 +14,20 @@ const errors = {
 }
 
 export default class Request {
+  static promiseRequest = (params) => {
+    return new Promise((resolve, reject) => {
+      Request.request({
+        ...params,
+        success: (res) => {
+          resolve(res)
+        },
+        fail: (err) => {
+          reject(err)
+        }
+      })
+    })
+  }
+
   static request = (params) => {
     wx.request({
       url: config.base_url + params.url,

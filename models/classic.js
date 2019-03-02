@@ -1,18 +1,19 @@
 import Request from '../utils/request'
 
 export default class Classis {
-  static fetchLatest = (success) => {
+  static fetchLatest = (success, fail) => {
     Request.request({
       url: '/classic/latest',
       success: (res) => {
         Classis._storeLastIndex(res.index)
         wx.setStorageSync(`classic-${res.index}`, res)
         success && success(res)
-      }
+      },
+      fail: (error) => fail && fail(error)
     })
   }
 
-  static fetchClassic = (index, nextOrPervious, success) => {
+  static fetchClassic = (index, nextOrPervious, success, fail) => {
     const storeKey = `classic-${nextOrPervious === 'next' ? index + 1 : index - 1}`
     const storeClassic = wx.getStorageSync(storeKey)
 
@@ -24,7 +25,8 @@ export default class Classis {
         success: (res) => {
           wx.setStorageSync(storeKey, res)
           success && success(res)
-        }
+        },
+        fail: (error) => fail && fail(error)
       })
     }
   }

@@ -1,0 +1,17 @@
+<!-- pages/book/book.wxml -->
+<view class='container'>
+  <view class='header'>
+    <view class='search-container'>
+      <image src='../../images/icon/search.png' />
+      <text>搜索书籍</text>
+    </view>
+  </view>
+  <view class='sub-container'>
+    <image class='header-img' src='../../images/book/quality.png' />
+    <view class='books-container'>
+      <block wx:for='{{books}}' wx:key='id'>
+        <book bind:onBook='onBook' book='{{item}}' />
+      </block>
+    </view>
+  </view>
+</view>
