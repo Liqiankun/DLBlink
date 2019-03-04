@@ -39,7 +39,7 @@
 			"current": 0,
 			"list": [
 				{
-					"id": -1,
+					"id": 0,
 					"name": "Book Detail",
 					"pathName": "pages/book-detail/book-detail",
 					"query": "bookId=1002",

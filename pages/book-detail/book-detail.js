@@ -3,7 +3,7 @@ import Book from '../../models/book'
 
 Page({
   data: {
-    detail: undefined,
+    book: undefined,
     comments: [],
     like: undefined
   },
@@ -14,7 +14,7 @@ Page({
     Book.fetchDetail(bookId)
       .then((res) => {
         this.setData({
-          detail: res
+          book: res
         })
       })
 

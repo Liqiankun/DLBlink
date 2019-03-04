@@ -1,2 +1,52 @@
-<!--pages/book-detail/book-detail.wxml-->
-<text>pages/book-detail/book-detail.wxml</text>
+<!-- pages/book-detail/book-detail.wxml -->
+<wxs src='../../utils/fliter.wxs' module='Util'></wxs>
+<wxs module='BookUtil'>
+  var limit = function(array, length) {
+    return array.slice(array, length)
+  }
+
+  module.exports = {
+    limit: limit
+  }
+</wxs>
+<view class='container'>
+  <view class='header'>
+    <image src='{{book.image}}' />
+    <text class='title'>{{book.title}}</text>
+    <text class='author'>{{book.author}}</text>
+  </view>
+  <view class='sub-container'>
+    <text class='headline'>短评</text>
+    <text class='shadow' wx:if='{{comments==false}}'>还没有短评</text>
+    <view class='comment-container'>
+      <block wx:for='{{BookUtil.limit(comments, 10)}}' wx:key='content'>
+        <tag tag-class='{{tool.highlight(index)}}' text='{{item.content}}'>
+          <text class='num' slot='after'>{{'+' + item.nums}}</text>
+        </tag>
+      </block>
+    </view>
+  </view>
+  <view class='sub-container'>
+    <text class='headline'>内容简介</text>
+    <text class='content' decode='{{true}}'>{{Util.format(book.summary)}}</text>
+  </view>
+  <view class="sub-container">
+    <text class="headline">书本信息</text>
+    <view class="detail-container">
+      <view class="vertical description">
+        <text>出版社</text>
+        <text>出版年</text>
+        <text>页数</text>
+        <text>定价</text>
+        <text>装帧</text>
+      </view>
+      <view class="vertical">
+        <text>{{book.publisher}}</text>
+        <text>{{book.pubdate}}</text>
+        <text>{{book.pages}}</text>
+        <text>{{book.price}}</text>
+        <text>{{book.binding}}</text>
+      </view>
+    </view>
+  </view>
+</view>
